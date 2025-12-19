@@ -1,0 +1,20 @@
+Spring Validation => 
+
+step1 : 
+		lib / dep / jar => 
+					pom.xml -> validation -> 
+					spring starter -> validation -> 
+					
+step2 :
+		you have to mark validation inside bean class 
+		@NotBlank 
+		apply validation using @NotBlank , @NotNull , @Pattern , @Min , @Max
+		 
+		
+step 3:
+		you need to check , bean is as per validation or not 
+		do we have any validations errors ? 
+		@Validated -> validation run 
+				and return 
+			BindingResult -> error true | false 
+			
