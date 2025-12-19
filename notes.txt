@@ -17,4 +17,17 @@ step 3:
 		@Validated -> validation run 
 				and return 
 			BindingResult -> error true | false 
+		
+step 4: 
+		using binding result we can check error is present or not 
+			result.hasErrors() 
+			
+			if errors are their send result using model and  return with input jsp 
+			else perform your logic 
+			
+step 5: to print error message on jsp 
+			we will use result in EL 
+					${result.getFieldError("fieldName").defaultMessage} 
+					
+------------------------------------------------------------------------
 			
