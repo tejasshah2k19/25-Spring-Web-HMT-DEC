@@ -30,4 +30,49 @@ step 5: to print error message on jsp
 					${result.getFieldError("fieldName").defaultMessage} 
 					
 ------------------------------------------------------------------------
+
+spring + database postgres 
+
+	1) no need to create DbConnection
+	2) no need to create PreparedStatement 
+	
+	steps for database connection 
+	
+step 1:
+			1) spring data jdbc 
+			2) postgres driver 		 
+
+step 2:		configure database information
+				application.properties 
+				url
+				userName
+				password
+				#database
+				spring.datasource.url=jdbc:postgresql://localhost:5432/jjp
+				spring.datasource.username=postgres
+				spring.datasource.password=root				
+
+			
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			

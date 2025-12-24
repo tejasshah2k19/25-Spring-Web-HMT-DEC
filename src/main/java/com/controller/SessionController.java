@@ -23,7 +23,7 @@ public class SessionController {
 //		return "Login";
 //	}
 
-	@PostMapping("saveUser")
+	@PostMapping("saveUser1")
 	public String saveUser(UserBean userBean) {
 		System.out.println(userBean.getFirstName());
 		System.out.println(userBean.getEmail());
