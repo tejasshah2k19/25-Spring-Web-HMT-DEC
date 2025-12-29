@@ -26,4 +26,8 @@ public class BatchDao {
 	public List<BatchBean> getAllBatch() {
 		return stmt.query("select * from  batches", new BeanPropertyRowMapper<>(BatchBean.class));
 	}
+	
+	public void deleteBatch(Integer batchId) {
+		stmt.update("delete from batches where batchid = ? ",batchId);
+	}
 }

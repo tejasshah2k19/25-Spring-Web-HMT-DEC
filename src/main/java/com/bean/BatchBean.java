@@ -17,6 +17,7 @@ public class BatchBean {
 //	@PositiveOrZero
 
 	
+	private Integer batchId; 
 	
 	@NotBlank(message = "Please Enter Batch Name")
 	private String batchName;
@@ -32,6 +33,15 @@ public class BatchBean {
 	@Max(value = 5, message = "Max hours can be 5")
 	@NotNull(message = "Please Enter Total Hours")
 	private Integer totalHours;
+
+	
+	public Integer getBatchId() {
+		return batchId;
+	}
+
+	public void setBatchId(Integer batchId) {
+		this.batchId = batchId;
+	}
 
 	public String getBatchName() {
 		return batchName;

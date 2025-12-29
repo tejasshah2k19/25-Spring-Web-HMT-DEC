@@ -46,5 +46,12 @@ public class BatchController {
 		
 		return "ListBatch";
 	}
+	
+	@GetMapping("deleteBatch")
+	public String deleteBatch(Integer batchId) {
+		batchDao.deleteBatch(batchId);
+		return "redirect:/listBatch";
+
+	}
 
 }

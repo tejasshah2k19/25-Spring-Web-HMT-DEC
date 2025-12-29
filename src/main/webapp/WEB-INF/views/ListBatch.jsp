@@ -37,7 +37,7 @@
                         <td>${b.facultyName}</td>
                         <td>${b.subjectName}</td>
                         <td>${b.totalHours}</td>
-						<td>Delete | View  | Edit </td>
+						<td><a href="deleteBatch?batchId=${b.batchId}">Delete</a> | View  | Edit </td>
                     </tr>
                 </c:forEach>
             </tbody>
