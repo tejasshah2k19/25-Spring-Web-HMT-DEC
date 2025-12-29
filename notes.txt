@@ -55,7 +55,39 @@ step 2:		configure database information
 			
 ------------------------------------------------------------------------
 
+spring + database + query 
 
+	JdbcTemplate --> execute any sql query in spring 
+
+	DML
+
+	
+	select : read only  : 	 query()  => any number record  
+							 queryForObject() => exactly one record 
+
+	insert : state change :  update()
+	update : state change :	 update()
+	delete : state change :	 update()
+	
+------------------------------------------------------------------------
+
+	 dao => BatchDao => @Repository 
+	 
+	 public void addBatch() -> insert query -> JdbcTemplate -> @Autowired 
+	 					jdbcTemplate -> update() 
+	 					
+	 					
+	 inside controller we used dao and it's addBatch() 
+	 	we need to create object of BatchDao -> @Autowired 
+	 	
+-------------------------------------------------------------------------
+
+	how to get all batch records from database? 
+		select * from batches; 
+		dao : jdbcTemplate : query() 
+		
+		List<BatchBean> getAllBAtch()
+			return 
 
 
 
