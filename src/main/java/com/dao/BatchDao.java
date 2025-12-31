@@ -30,4 +30,9 @@ public class BatchDao {
 	public void deleteBatch(Integer batchId) {
 		stmt.update("delete from batches where batchid = ? ",batchId);
 	}
+	
+	public BatchBean getBatchById(Integer batchId) {
+		return stmt.queryForObject("select * from  batches where batchId = ? ", new BeanPropertyRowMapper<>(BatchBean.class),batchId);
+		
+	}
 }
